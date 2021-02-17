@@ -27,5 +27,7 @@ int main(){
 
 // lets start the fun
 
+std::cout << "Dette er min version av første delen av koden :) " << std::endl;  
+
     return 0;
 }
