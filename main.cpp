@@ -23,24 +23,30 @@
 
 #include "iostream"
 
+void myFunction();
+
 int main(){
-// Noen random variabler
-int x = 3;
-int y = 5;
-int z (12);
-int sum;
+    // Noen random variabler
+    int x = 3;
+    int y = 5;
+    int z (12);
+    int sum;
+    sum = x + y + z;
 
-sum = x + y + z;
-
-// lets start the fun
-std::cout << std::endl;
-std::cout << "Dette er min version av første delen av koden :) " <<std::endl;  
-std::cout << std::endl;
-std::cout << "Nå tror jeg source kontroll er i rkitg innstillinger " << std::endl;  
-std::cout <<std::endl;
-std::cout << sum << std::endl;  
-std::cout <<std::endl;
+    // lets start the fun
+    std::cout << std::endl;
+    std::cout << "Dette er min version av første delen av koden :) " <<std::endl;  
+    std::cout << std::endl;
+    std::cout << "Nå tror jeg source kontroll er i rkitg innstillinger " << std::endl;  
+    std::cout <<std::endl;
+    std::cout << sum << std::endl;  
+    std::cout <<std::endl;
+    myFunction();
 
     return 0;
+}
 
+void myFunction(){
+    std::cout << "Dette er en funksjon for å se branchen til github" << std::endl;
+    std::cout <<std::endl;
 }
