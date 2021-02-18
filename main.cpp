@@ -27,9 +27,10 @@ int main(){
 // Noen random variabler
 int x = 3;
 int y = 5;
+int z (12);
 int sum;
 
-sum = x + y;
+sum = x + y + z;
 
 // lets start the fun
 std::cout << std::endl;
