@@ -24,6 +24,10 @@
 #include "iostream"
 
 int main(){
+// Noen random variabler
+int x;
+int y;
+int sum;
 
 // lets start the fun
 std::cout << std::endl;
