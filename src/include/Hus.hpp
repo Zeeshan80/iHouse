@@ -14,8 +14,8 @@ class Hus
 		~Hus();
 	int x;
 	int y;
-	void myHusFunction();
-	int myHusFunction2(int x1,int y1);	
+	void myHusFunctionHus();
+	int myHusFunctionHus2(int x1,int y1);	
 };
 
 #endif

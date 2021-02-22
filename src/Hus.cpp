@@ -11,13 +11,13 @@ Hus::~Hus()
 	
 }
 
-void Hus::myHusFunction(){
+void Hus::myHusFunctionHus(){
     
     std::cout << "Dette er en test for å sjekke om hpp og cpp filene fungerer" << std::endl;
 
 }
 
-int Hus::myHusFunction2(int x, int y){
+int Hus::myHusFunctionHus2(int x, int y){
 
 int sum = x + y;
 

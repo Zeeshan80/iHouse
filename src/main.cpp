@@ -23,6 +23,8 @@
 
 #include "iostream"
 #include "include/Hus.hpp"
+#include "include/Kjokken.hpp"
+#include "include/Stue.hpp"
 
 
 void myFunction();
@@ -46,13 +48,21 @@ int main(){
     myFunction();
 
     Hus objHus;
+    Kjokken objKjokken;
+    Stue objStue;
 
-    objHus.myHusFunction();
-    //objHus.myHusFunction2(2,5);
+    objHus.myHusFunctionHus();
     std::cout <<std::endl;
 
-std::cout << objHus.myHusFunction2(2,5) << std::endl;
-std::cout <<std::endl;
+    std::cout << objHus.myHusFunctionHus2(2,5) << std::endl;
+    std::cout <<std::endl;
+
+    objKjokken.myFunctionKjokken();
+    std::cout <<std::endl;
+
+    objStue.myFunctionStue();
+    std::cout <<std::endl;
+    
     return 0;
 }
 
