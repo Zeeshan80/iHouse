@@ -22,6 +22,8 @@
 */
 
 #include "iostream"
+#include "include/Hus.hpp"
+
 
 void myFunction();
 
@@ -43,6 +45,14 @@ int main(){
     std::cout <<std::endl;
     myFunction();
 
+    Hus objHus;
+
+    objHus.myHusFunction();
+    //objHus.myHusFunction2(2,5);
+    std::cout <<std::endl;
+
+std::cout << objHus.myHusFunction2(2,5) << std::endl;
+std::cout <<std::endl;
     return 0;
 }
 
