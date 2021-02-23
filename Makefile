@@ -8,9 +8,9 @@ CXXFLAGS = -std=c++11 -Wall
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = iHouse
+APPNAME = myapp
 EXT = .cpp
-SRCDIR = /c/Users/autoo/Desktop/prosjektpiop/iHouse/iHouse
+SRCDIR = src
 OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############
