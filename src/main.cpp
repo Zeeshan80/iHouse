@@ -25,7 +25,7 @@
 #include "include/Hus.hpp"
 #include "include/Kjokken.hpp"
 #include "include/Stue.hpp"
-
+#include "include/Sensorer.hpp"
 
 void myFunction();
 
@@ -50,6 +50,7 @@ int main(){
     Hus objHus;
     Kjokken objKjokken;
     Stue objStue;
+    Sensorer objSensorer;
 
     objHus.myHusFunctionHus();
     std::cout <<std::endl;
@@ -62,7 +63,10 @@ int main(){
 
     objStue.myFunctionStue();
     std::cout <<std::endl;
-    
+
+    objSensorer.myFunctionSensorer();
+    std::cout <<std::endl;
+
     return 0;
 }
 
@@ -70,3 +74,5 @@ void myFunction(){
     std::cout << "Dette er en funksjon for å se branchen til github" << std::endl;
     std::cout <<std::endl;
 }
+
+
