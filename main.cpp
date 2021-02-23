@@ -1,6 +1,5 @@
 
 #include "iostream"
-#include "include\romBad.hpp" 
 
 int main(){
 
