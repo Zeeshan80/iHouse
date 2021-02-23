@@ -14,6 +14,7 @@ std::cout << std::endl;
 std::cout << "Nå tror jeg source kontroll er i rkitg innstillinger " << std::endl;  
 std::cout <<std::endl;
 
+// test 2 i sammmme
 
 // test seef
     return 0;
