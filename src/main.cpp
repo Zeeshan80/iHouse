@@ -26,6 +26,7 @@
 #include "include/Kjokken.hpp"
 #include "include/Stue.hpp"
 #include "include/Sensorer.hpp"
+#include "include/SensorVarme.hpp"
 
 void myFunction();
 
