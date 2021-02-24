@@ -2,14 +2,13 @@
 #define KJOKKEN_H
 #pragma once
 	
-class Kjokken  
+class Kjokken 
 {
 	private:
 
 	public:
-
 		Kjokken();
 		~Kjokken();
-	void myFunctionKjokken();
+			
 };
 #endif

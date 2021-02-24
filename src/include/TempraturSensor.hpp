@@ -2,14 +2,15 @@
 #define TEMPRATURSENSOR_H
 #pragma once
 	
-class TempraturSensor  
+class TempraturSensor //: virtual public Sensorer
 {
 	private:
 
 	public:
-
 		TempraturSensor();
 		~TempraturSensor();
-
+		void Init();
+		void Write();
+		void Read();
 };
 #endif

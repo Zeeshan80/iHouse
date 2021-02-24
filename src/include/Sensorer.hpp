@@ -2,21 +2,17 @@
 #define SENSORER_H
 #pragma once
 	
+
+
 class Sensorer  
 {
 	private:
 
-	protected:
-
-
-
-
 	public:
-
 		Sensorer();
 		~Sensorer();
-
-	void myFunctionSensorer(); 
-
+		void Init();
+	//   void Write();
+		//  void Read() ;
 };
-#endif
+#endif 
