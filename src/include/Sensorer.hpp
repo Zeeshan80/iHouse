@@ -6,6 +6,11 @@ class Sensorer
 {
 	private:
 
+	protected:
+
+
+
+
 	public:
 
 		Sensorer();

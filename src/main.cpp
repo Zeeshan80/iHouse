@@ -29,6 +29,7 @@
 #include "include/LydSensor.hpp"
 #include "include/LysSensor.hpp"
 #include "include/TempraturSensor.hpp"
+#include "include/PowerSensor.hpp"
 
 void myFunction();
 
