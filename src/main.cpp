@@ -26,7 +26,9 @@
 #include "include/Kjokken.hpp"
 #include "include/Stue.hpp"
 #include "include/Sensorer.hpp"
-#include "include/SensorVarme.hpp"
+#include "include/LydSensor.hpp"
+#include "include/LysSensor.hpp"
+#include "include/TempraturSensor.hpp"
 
 void myFunction();
 
@@ -37,7 +39,6 @@ int main(){
     int z (12);
     int sum;
     sum = x + y + z;
-
     // lets start the fun
     std::cout << std::endl;
     std::cout << "Dette er min version av første delen av koden :) " <<std::endl;  
