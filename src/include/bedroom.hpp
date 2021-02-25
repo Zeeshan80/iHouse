@@ -9,7 +9,7 @@ class bedroom
 	double temperature;
 	double humidity;
 	bool light;
-	bool wakeUpLight;
+	wakeUpLight* wakeUpLight();
 
 	public:
 		//Set and get function for temperature
@@ -22,8 +22,8 @@ class bedroom
 		void set_lightLevel(bool state);
 		bool get_lightLevel();	
 		//Set and get function for the wakeUpLight
-		//void set_wakeUpLight();
-		//bool get_wakeUplightInfo();	
+		void set_wakeUpLight(unsigned int hour, unsigned int minute,unsigned int soundnumber,unsigned int brightness);
+		void get_wakeUplightInfo();	
 
 
 		bedroom();

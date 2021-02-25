@@ -46,6 +46,34 @@ bool wakeUpLight::get_lighLevel() {
     return lightLevel;
 }
 
+
+void wakeUpLight::set_onOff(bool state) {
+    onOff = state;
+}
+
+bool wakeUpLight::get_onOff() {
+    return onOff;
+}
+
+void wakeUpLight::get_info() {
+    std::cout << "-----Information about the wakeuplight-----" << std::endl;
+   std::cout << "Alarmtime: " << alarmTimeMinute << ":"<< alarmTimeMinute <<std::endl;
+   std::cout << "AlarmSound: " << sound  << std::endl;
+    std::cout << "Brightness of alarm: "<< lightLevel   << std::endl;
+   if (onOff)
+   {
+      std::cout << "Alarm: on"  << std::endl; 
+   }
+   else{
+      std::cout << "Alarm: off"  << std::endl;
+   }
+    
+   std::cout << "-------------------------------------------" << std::endl << std::endl;
+}
+
+ 
+
+
 wakeUpLight::wakeUpLight() {
     
 }

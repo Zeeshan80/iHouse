@@ -1,5 +1,7 @@
 #include "include/bedroom.hpp" 
+#include "include/wakeuplight.hpp"  
 #include "iostream"
+
 	
 void bedroom::set_temp(unsigned int temp) {
     if(0 < temp && temp < 30){
@@ -34,7 +36,13 @@ bool bedroom::get_lightLevel() {
     return light;
 }
 
+void bedroom::set_wakeUpLight(unsigned int hour, unsigned int minute, unsigned int soundnumber, unsigned int brightness) {
+    
+}
 
+void bedroom::get_wakeUplightInfo() {
+    
+}
 
 
 bedroom::bedroom() {

@@ -1,1 +1,2 @@
-obj/bedroom.o: src/bedroom.cpp src/include/bedroom.hpp
+obj/bedroom.o: src/bedroom.cpp src/include/bedroom.hpp \
+ src/include/wakeuplight.hpp

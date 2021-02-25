@@ -10,6 +10,7 @@ class wakeUpLight
 	unsigned int alarmTimeMinute;
 	std::string sound;
 	unsigned int lightLevel;
+	bool onOff;
 
 	public:
 		//Set and get function for setting and getting the time the alarm goes of
@@ -21,6 +22,11 @@ class wakeUpLight
 		//Set and get function for the lights
 		void set_lighLevel(unsigned int brightness);
 		bool get_lighLevel();
+		//Set and get to check if alarm is on
+		void set_onOff(bool state);
+		bool get_onOff();
+		//Print WakeUpLightInfo
+		void get_info();
 
 		wakeUpLight();
 		~wakeUpLight();
