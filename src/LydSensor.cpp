@@ -13,8 +13,20 @@ LydSensor::~LydSensor()
 	
 }
 
-void LydSensor::Init_1(){
+void LydSensor::Init(){
 
-std::cout  << "Test for lydsensor" << std::endl;
+std::cout  << "Test for lydsensor init" << std::endl;
+
+} 
+
+void LydSensor::Write(){
+
+std::cout  << "Test for lydsensor write" << std::endl;
+
+}
+
+void LydSensor::Read(){
+
+    std::cout  << "Dette tar tid" << std::endl;
 
 }

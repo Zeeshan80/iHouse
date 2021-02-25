@@ -11,7 +11,7 @@ class LydSensor : public Sensorer
 	public:
 		LydSensor();
 		~LydSensor();
-		void Init_1();
+		void Init();
 		void Write();
 		void Read();
 };

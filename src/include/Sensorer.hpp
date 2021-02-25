@@ -11,8 +11,8 @@ class Sensorer
 	public:
 		Sensorer();
 		~Sensorer();
-		void Init();
-	//   void Write();
-		//  void Read() ;
+		virtual void Init() = 0;
+	  	virtual void Write() = 0;
+		virtual void Read() = 0;
 };
 #endif 

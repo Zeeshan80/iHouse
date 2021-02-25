@@ -31,9 +31,14 @@ int main(){
     
     LydSensor objLydsensor;
 
-    objLydsensor.Init();
-    objLydsensor.Init_1();
+    // objLydsensor.Init();    
+    // objLydsensor.Write();
 
+    Sensorer* objSensorer = &objLydsensor;
+
+    objSensorer->Init();
+    objSensorer->Write();
+    objSensorer->Read();
 
     return 0;
 }

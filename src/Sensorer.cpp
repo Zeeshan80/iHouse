@@ -12,7 +12,3 @@ Sensorer::~Sensorer()
 	
 }
 
-void Sensorer::Init(){
-
-    std::cout  << "Test for sensor" << std::endl;
-}
