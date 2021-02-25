@@ -1,1 +1,1 @@
-obj/main.o: src/main.cpp src/include\baderom.hpp src/include\badekar.hpp
+obj/main.o: src/main.cpp src/include\bathroom.hpp src/include\bathtub.hpp
