@@ -22,51 +22,26 @@
 */
 
 #include "iostream"
-#include "include/Hus.hpp"
-#include "include/Kjokken.hpp"
-#include "include/Stue.hpp"
-
+#include "include/Sensorer.hpp"
+#include "include/LydSensor.hpp"
 
 void myFunction();
 
 int main(){
-    // Noen random variabler
-    int x = 3;
-    int y = 5;
-    int z (12);
-    int sum;
-    sum = x + y + z;
-
-    // lets start the fun
-    std::cout << std::endl;
-    std::cout << "Dette er min version av første delen av koden :) " <<std::endl;  
-    std::cout << std::endl;
-    std::cout << "Nå tror jeg source kontroll er i rkitg innstillinger " << std::endl;  
-    std::cout <<std::endl;
-    std::cout << sum << std::endl;  
-    std::cout <<std::endl;
-    myFunction();
-
-    Hus objHus;
-    Kjokken objKjokken;
-    Stue objStue;
-
-    objHus.myHusFunctionHus();
-    std::cout <<std::endl;
-
-    std::cout << objHus.myHusFunctionHus2(2,5) << std::endl;
-    std::cout <<std::endl;
-
-    objKjokken.myFunctionKjokken();
-    std::cout <<std::endl;
-
-    objStue.myFunctionStue();
-    std::cout <<std::endl;
     
+    LydSensor objLydsensor;
+
+    // objLydsensor.Init();    
+    // objLydsensor.Write();
+
+    Sensorer* objSensorer = &objLydsensor;
+
+    objSensorer->Init();
+    objSensorer->Write();
+    objSensorer->Read();
+
     return 0;
 }
 
-void myFunction(){
-    std::cout << "Dette er en funksjon for å se branchen til github" << std::endl;
-    std::cout <<std::endl;
-}
+
+

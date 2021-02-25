@@ -11,8 +11,3 @@ Stue::~Stue()
 	
 }
 
-void Stue::myFunctionStue(){
-
-std::cout << "Dette er Stue klassen" << std::endl;
-
-}

@@ -11,8 +11,3 @@ Kjokken::~Kjokken()
 	
 }
 
-void Kjokken::myFunctionKjokken(){
-
-std::cout << "Dette er kjøkken klassen" << std::endl;
-
-}
