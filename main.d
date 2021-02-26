@@ -1,2 +1,2 @@
-obj/main.o: src/main.cpp src/include/Sensorer.hpp \
-  src/include/LydSensor.hpp
+obj/main.o: src/main.cpp src/include/Sensors.hpp \
+  src/include/SoundSensor.hpp

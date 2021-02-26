@@ -1,17 +1,15 @@
-#ifndef SENSORER_H
-#define SENSORER_H
+#ifndef SENSORS_H
+#define SENSORS_H
 #pragma once
 	
-
-
-class Sensorer  
+class Sensors  
 {
 	private:
-	// int value;
 
 	public:
-		Sensorer();
-		~Sensorer();
+
+		Sensors();
+		~Sensors();
 		virtual void Init() = 0;
 	  	virtual void Write() = 0;
 		virtual void Read() = 0;
@@ -24,5 +22,6 @@ class Sensorer
 	}
  */
 
+
 };
-#endif 
+#endif

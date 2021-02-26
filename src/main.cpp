@@ -22,30 +22,26 @@
 */
 
 #include "iostream"
-#include "include/Sensorer.hpp"
-#include "include/LydSensor.hpp"
+#include "include/Sensors.hpp"
+#include "include/SoundSensor.hpp"
 
 void myFunction();
 
-int main(){
-    
-    LydSensor objLydsensor;
-    Sensorer* objSensorer = &objLydsensor;
-
-    objSensorer->Init();
-    objSensorer->Write();
-    objSensorer->Read();
+int main(){ 
+    SoundSensor objSoundSensor;
+    // Sensors* objSensors  = &objSoundSensor;
     srand((int)time(0));
-	
     int myRandomValue = (rand() % 10) + 1;
-    // std::cout << std::endl; 
-    // std::cout << myRandomValue << " " << std::endl;
     int *myRandomPointerValue = &myRandomValue;
     std::cout << std::endl;    
-    objLydsensor.setValue( *myRandomPointerValue);
-    std::cout << "Det skrives ut " << objLydsensor.getValue() << std::endl;
+    objSoundSensor.setValue( *myRandomPointerValue);
+    std::cout << "Det skrives ut " << objSoundSensor.getValue() << std::endl;
     std::cout << std::endl;
 
+    // objSensors->Init();
+    // objSensors->Write();
+    // objSensors->Read();
+    
     return 0;
 }
 
