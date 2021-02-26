@@ -30,15 +30,21 @@ void myFunction();
 int main(){
     
     LydSensor objLydsensor;
-
-    // objLydsensor.Init();    
-    // objLydsensor.Write();
-
     Sensorer* objSensorer = &objLydsensor;
 
     objSensorer->Init();
     objSensorer->Write();
     objSensorer->Read();
+    srand((int)time(0));
+	
+    int myRandomValue = (rand() % 10) + 1;
+    // std::cout << std::endl; 
+    // std::cout << myRandomValue << " " << std::endl;
+    int *myRandomPointerValue = &myRandomValue;
+    std::cout << std::endl;    
+    objLydsensor.setValue( *myRandomPointerValue);
+    std::cout << "Det skrives ut " << objLydsensor.getValue() << std::endl;
+    std::cout << std::endl;
 
     return 0;
 }

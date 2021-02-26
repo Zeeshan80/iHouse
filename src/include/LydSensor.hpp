@@ -7,6 +7,7 @@
 class LydSensor : public Sensorer
 {
 	private:
+	int value;
 
 	public:
 		LydSensor();
@@ -14,5 +15,9 @@ class LydSensor : public Sensorer
 		void Init();
 		void Write();
 		void Read();
+		void setValue(int v);
+		int getValue();
+
+
 };
 #endif
