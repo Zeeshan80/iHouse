@@ -1,5 +1,5 @@
 #include "include/SoundSensor.hpp"
-	
+
 SoundSensor::SoundSensor()
 {
 	

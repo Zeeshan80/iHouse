@@ -1,8 +1,10 @@
 #ifndef SOUNDSENSOR_H
 #define SOUNDSENSOR_H
 #pragma once
+
+#include "Sensors.hpp"
 	
-class SoundSensor  
+class SoundSensor : public Sensors
 {
 	private:
 		int value;
@@ -14,8 +16,5 @@ class SoundSensor
 		void Read();	
 		void setValue(int v);
 		int getValue();
-
-
-
 };
 #endif

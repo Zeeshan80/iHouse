@@ -29,7 +29,8 @@ void myFunction();
 
 int main(){ 
     SoundSensor objSoundSensor;
-    // Sensors* objSensors  = &objSoundSensor;
+    Sensors* objSensors = &objSoundSensor;
+
     srand((int)time(0));
     int myRandomValue = (rand() % 10) + 1;
     int *myRandomPointerValue = &myRandomValue;
