@@ -2,6 +2,7 @@
 #define BEDROOM_H
 #pragma once
 #include <string>
+#include "wakeUpLight.hpp"
 
 class bedroom  
 {

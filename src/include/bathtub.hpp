@@ -23,6 +23,7 @@ class bathtub
 		void get_bathtubInfo();
 		//Constructors and dectructor for the bathtub
 		bathtub(unsigned int temp, unsigned int height, bool state);
+		
 		bathtub();
 		~bathtub();
 

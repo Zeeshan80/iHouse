@@ -3,7 +3,7 @@
 #pragma once
 #include "bathtub.hpp"
 #include <string>
-	
+
 class bathroom  
 {
 	private:
@@ -42,9 +42,6 @@ class bathroom
 
 		bathroom();
 		~bathroom();
-
-
-
 
 };
 #endif
