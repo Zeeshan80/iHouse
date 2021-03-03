@@ -7,14 +7,13 @@
 class SoundSensor : public Sensors
 {
 	private:
-		int value;
+		// int value;
 	public:
 		SoundSensor();
 		~SoundSensor();
-		void Init();
-		void Write();
-		void Read();	
-		void setValue(int v);
+	/* 	void setValue(int v);
 		int getValue();
+		void Soundadjustment(); */
+
 };
 #endif
