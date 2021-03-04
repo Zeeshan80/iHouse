@@ -1,11 +1,22 @@
 #include "include/SoundSensor.hpp"
 #include "iostream"
 
-SoundSensor::SoundSensor(){
+SoundSensor::SoundSensor(){}
+SoundSensor::~SoundSensor(){}
+
+void SoundSensor::setSound(){
+
 }
-	
-SoundSensor::~SoundSensor(){
+
+int SoundSensor::getSound(){
+
+} 
+
+bool SoundSensor::checkSound(){
+    
 }
+
+
 
 /* void SoundSensor::setValue(int v){
     value = v;

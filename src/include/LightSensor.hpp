@@ -1,17 +1,18 @@
 #ifndef LIGHTSENSOR_H
 #define LIGHTSENSOR_H
 #pragma once
-	
-class LightSensor  
+#include "Sensors.hpp"
+#include "iostream"
+
+class LightSensor  : Sensors
 {
 	private:
 
 	public:
-
 		LightSensor();
 		~LightSensor();
-		void Init();
-		void Write();
-		void Read();
+		void setLight();
+		int getLight();
+		bool checkLight();
 };
 #endif

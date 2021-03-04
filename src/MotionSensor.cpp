@@ -1,11 +1,17 @@
 #include "include/MotionSensor.hpp"
 	
-MotionSensor::MotionSensor()
-{
+MotionSensor::MotionSensor(){}
 	
+MotionSensor::~MotionSensor(){}
+
+void MotionSensor::setMotion(){
+
 }
-	
-MotionSensor::~MotionSensor()
-{
-	
+
+int MotionSensor::getMotion(){
+
+}
+
+bool MotionSensor::checkMotion(){
+    
 }

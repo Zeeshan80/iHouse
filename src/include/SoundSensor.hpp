@@ -11,9 +11,8 @@ class SoundSensor : public Sensors
 	public:
 		SoundSensor();
 		~SoundSensor();
-	/* 	void setValue(int v);
-		int getValue();
-		void Soundadjustment(); */
-
+		void setSound();
+		int getSound();
+		bool checkSound();
 };
 #endif

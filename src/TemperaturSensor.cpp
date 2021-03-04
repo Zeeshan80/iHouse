@@ -1,11 +1,16 @@
 #include "include/TemperaturSensor.hpp"  
 	
-TemperaturSensor::TemperaturSensor()
-{
-	
+TemperaturSensor::TemperaturSensor(){}
+TemperaturSensor::~TemperaturSensor(){}
+
+void TemperaturSensor::setTemp(){
+
 }
-	
-TemperaturSensor::~TemperaturSensor()
-{
-	
+
+int TemperaturSensor::getTemp(){
+
+}
+
+bool TemperaturSensor::checkTemp(){
+    
 }
