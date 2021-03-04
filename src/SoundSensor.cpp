@@ -5,15 +5,15 @@ SoundSensor::SoundSensor(){}
 SoundSensor::~SoundSensor(){}
 
 void SoundSensor::setSound(){
-    Sound1 = true; 
+    SoundValue = true; 
 }
 
 int SoundSensor::getSound(){
-return Sound;
+return SoundValue;
 } 
 
 bool SoundSensor::checkSound(){
-if (Sound < 10)     
+if (SoundValue < 10)     
     return true;
 else
     return false; 

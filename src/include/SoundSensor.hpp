@@ -4,15 +4,16 @@
 
 #include "Sensors.hpp"
 	
-class SoundSensor : public Sensors
-{
+class SoundSensor : public Sensors {
 	private:
-		// int value;
+		// Variables;
+		int SoundValue;
+		bool SoundPower;
 	public:
+		// Constructur & Destructur
 		SoundSensor();
 		~SoundSensor();
-		int Sound;
-		bool Sound1;
+		// Functions
 		void setSound();
 		int getSound();
 		bool checkSound();

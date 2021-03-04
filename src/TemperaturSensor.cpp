@@ -5,16 +5,16 @@ TemperaturSensor::TemperaturSensor(){}
 TemperaturSensor::~TemperaturSensor(){}
 
 void TemperaturSensor::setTemp(){
-    Temp1 = true;
+    TempValue = true;
 }
 
 int TemperaturSensor::getTemp(){
-    return Temp;
+    return TempValue;
 }
 
 bool TemperaturSensor::checkTemp(){
-if (Temp < 10)     
-    return true;
-else
-    return false;  
+    if (TempValue < 10)     
+        return true;
+    else
+        return false;  
 }

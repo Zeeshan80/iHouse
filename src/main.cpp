@@ -32,6 +32,14 @@
 #include "iostream"
 
 int main(){ 
+    // Oject for each sensor/sub-class
+    LightSensor LightObject;
+    MotionSensor MotionObject;
+    SoundSensor SoundObject;
+    TemperaturSensor TempObject;
+    // Logic based on each sensor and its purpose
+    
+
 
 
     return 0;

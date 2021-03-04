@@ -2,19 +2,18 @@
 #include "iostream"
 
 LightSensor::LightSensor(){}
-	
 LightSensor::~LightSensor(){}
 
-void LightSensor::setLight(){
-    Light1 = true;
+void LightSensor::setLight(int *value){
+    *LightValue = *value;
 }
 
 int LightSensor::getLight(){
-    return Light;
+    return *LightValue;
 }
 
 bool LightSensor::checkLight(){
-    if (Light < 10)     
+    if (*LightValue < 10)     
         return true;
     else
         return false; 

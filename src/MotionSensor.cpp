@@ -5,15 +5,15 @@ MotionSensor::MotionSensor(){}
 MotionSensor::~MotionSensor(){}
 
 void MotionSensor::setMotion(){
-    Motion1 = true;
+    MotionValue = true;
 }
 
 int MotionSensor::getMotion(){
-    return Motion;
+    return MotionValue;
 }
 
 bool MotionSensor::checkMotion(){
-    if (Motion < 10)     
+    if (MotionValue < 10)     
         return true;
     else
         return false; 

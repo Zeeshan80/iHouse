@@ -4,16 +4,17 @@
 #include "Sensors.hpp"
 #include "iostream"
 
-class LightSensor  : Sensors
-{
+class LightSensor : public Sensors {
 	private:
-
+		// Variables
+		int* LightValue;
+		bool LightPower;
 	public:
+		//  Constructur & Destructur
 		LightSensor();
 		~LightSensor();
-		int Light;
-		bool Light1;
-		void setLight();
+		// Funcions
+		void setLight(int *value);
 		int getLight();
 		bool checkLight();
 };

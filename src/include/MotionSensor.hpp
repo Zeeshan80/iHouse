@@ -3,15 +3,16 @@
 #include "Sensors.hpp"
 #pragma once
 	
-class MotionSensor  : Sensors
-{
+class MotionSensor : public Sensors {
 	private:
-
+		// Variables
+		int MotionValue;
+		bool MotionPower;
 	public:
-		int Motion;
-		bool Motion1;
+		// Constructur & Destructur
 		MotionSensor();
 		~MotionSensor();
+		// Funcions
 		void setMotion();
 		int getMotion();
 		bool checkMotion();

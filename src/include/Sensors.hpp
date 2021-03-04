@@ -7,10 +7,10 @@ class Sensors
 	private:
 
 	public:
-		int Light, Motion, Sound, Temp;
+		int LightValue, MotionValue, Soundvalue, TempValue;
 		//To check that the sensors are working or not or simple to activate
 		// a sensore we set it to true or false for which we used bool as return type
-		bool Light1, Motion1, Sound1, Temp1; 
+		bool LightPower, MotionPower, SoundPower, TempPower; 
 		// Constructur
 		Sensors(); 
 		// Destructur

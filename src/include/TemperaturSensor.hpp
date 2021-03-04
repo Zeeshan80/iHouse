@@ -4,15 +4,16 @@
 #include "Sensors.hpp"
 #include "iostream"
 
-class TemperaturSensor  
-{
+class TemperaturSensor  : public Sensors {
 	private:
-
+		// Varaibles
+		int TempValue;
+		bool TempPower;
 	public:
+		// Constructur & Destructur
 		TemperaturSensor();
 		~TemperaturSensor();
-		int Temp;
-		bool Temp1;
+		// Functions
 		void setTemp();
 		int getTemp();
 		bool checkTemp();
