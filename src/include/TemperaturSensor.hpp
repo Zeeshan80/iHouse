@@ -11,6 +11,8 @@ class TemperaturSensor
 	public:
 		TemperaturSensor();
 		~TemperaturSensor();
+		int Temp;
+		bool Temp1;
 		void setTemp();
 		int getTemp();
 		bool checkTemp();

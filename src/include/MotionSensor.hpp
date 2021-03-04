@@ -8,7 +8,8 @@ class MotionSensor  : Sensors
 	private:
 
 	public:
-
+		int Motion;
+		bool Motion1;
 		MotionSensor();
 		~MotionSensor();
 		void setMotion();

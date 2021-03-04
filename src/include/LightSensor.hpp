@@ -11,6 +11,8 @@ class LightSensor  : Sensors
 	public:
 		LightSensor();
 		~LightSensor();
+		int Light;
+		bool Light1;
 		void setLight();
 		int getLight();
 		bool checkLight();

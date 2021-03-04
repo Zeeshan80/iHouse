@@ -22,9 +22,14 @@
     beyond the function of the system (does not become the main part of the task)
 */
 
-#include "iostream"
+// Different classes
 #include "include/Sensors.hpp"
+#include "include/LightSensor.hpp"
+#include "include/MotionSensor.hpp"
 #include "include/SoundSensor.hpp"
+#include "include/TemperaturSensor.hpp"
+// Local libraries
+#include "iostream"
 
 int main(){ 
 
