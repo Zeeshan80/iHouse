@@ -31,6 +31,7 @@
 // Local libraries
 #include "iostream"
 #include <iomanip>
+#include "ctime"
 
 int main(){ 
     // Oject for each sensor/sub-class
@@ -41,8 +42,6 @@ int main(){
 
     // SoundSensor objSoundSensor;
     // Sensors* objSensors = &objSoundSensor;
-
-
     // Sensors* ObjectLight =  new LightSensor(); 
     // Sensors* ObjectMotion = new MotionSensor();
     // Sensors* ObjectSound = new SoundSensor();
@@ -60,7 +59,17 @@ int main(){
     ObjectTemp.setTemp(myRandomTempValue);
     
         std::cout << std::endl; 
-        std::cout << " ----------- iHOUSE ----------- " << std::endl; 
+        std::cout << " ----------- iHOUSE ----------- " << std::endl;
+        // print various components of tm structure.    
+        time_t now = time(0);
+        tm *ltm = localtime(&now);
+        std::cout << std::endl; 
+        std::cout << "Year:" << 1900 + ltm->tm_year << std::endl;
+        std::cout << "Month: " << 1 + ltm->tm_mon << std::endl;
+        std::cout << "Day: " << ltm->tm_mday << std::endl;
+        std::cout << "Time: " << ltm->tm_hour <<  ":";
+        std::cout << ltm->tm_min << ":";
+        std::cout << ltm->tm_sec << std::endl; 
         std::cout << std::endl;
         std::cout << std::boolalpha;
         std::cout << "Light sensor is on: " << ObjectLight.checkLight()<< std::endl;
