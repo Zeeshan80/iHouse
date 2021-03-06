@@ -67,11 +67,40 @@ void bathroom::set_bathtub(unsigned int waterTemperature , unsigned int waterHei
 
 }
 
-
-bathroom::bathroom() {
-    
+void bathroom::set_bathtub_temperature(unsigned int waterTemperature)
+{
+    bathtub->set_temp(waterTemperature);
 }
 
-bathroom::~bathroom() {
-    
+void bathroom::set_bathtub_waterHeight(unsigned int waterHeight)
+{
+    bathtub->set_waterLevel(waterHeight);
 }
+
+void bathroom::set_bathtub_bubbles(bool bubblestate)
+{
+    bathtub->set_bubbleState(bubblestate);
+}
+
+
+void bathroom::get_bathtubinfo()
+{
+    bathtub->get_bathtubInfo();
+}
+
+
+
+
+bathroom::bathroom(double temperature1,double humidity1,bool waterLeak1,bool light1,bool personInBathroom1,std::string music1)
+{
+    temperature=temperature1;
+    humidity=humidity1;
+    waterLeak=waterLeak1;
+    light=light1;
+    personInBathroom=personInBathroom1;
+    music=music1;
+}
+
+bathroom::bathroom() {}
+
+bathroom::~bathroom() {}

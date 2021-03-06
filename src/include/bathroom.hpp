@@ -37,8 +37,11 @@ class bathroom
 		std::string get_music();
 		//Set and get function for controlling the bathtub
 		void set_bathtub(unsigned int waterTemperature , unsigned int waterHeight, bool bubblestate);
-		//void get_bathtubinfo();
-
+		void set_bathtub_temperature(unsigned int waterTemperature);
+		void set_bathtub_waterHeight(unsigned int waterHeight);
+		void set_bathtub_bubbles(bool bubblestate);
+		void get_bathtubinfo();
+		bathroom(double temperature1,double humidity1,bool waterleak1=false,bool light1=false,bool personInBathroom1=false,std::string music1="none");
 
 		bathroom();
 		~bathroom();
