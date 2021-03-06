@@ -61,31 +61,24 @@ std::string bathroom::get_music() {
 void bathroom::set_bathtub(unsigned int waterTemperature , unsigned int waterHeight, bool bubblestate)
 {
     
-	bathtub->set_waterLevel(waterHeight);
-	bathtub->set_bubbleState(bubblestate);
-    bathtub->set_temp(waterTemperature);
+	//bathtubBathroom->set_waterLevel(waterHeight);
+	//bathtubBathroom->set_bubbleState(bubblestate);
+    //bathtubBathroom->set_temp(waterTemperature);
+
+    bathtubBathroom = new bathtub(waterTemperature, waterHeight, bubblestate);
 
 }
 
-void bathroom::set_bathtub_temperature(unsigned int waterTemperature)
+bathtub* bathroom::get_bathtub()
 {
-    bathtub->set_temp(waterTemperature);
+    return bathtubBathroom;
 }
 
-void bathroom::set_bathtub_waterHeight(unsigned int waterHeight)
-{
-    bathtub->set_waterLevel(waterHeight);
-}
-
-void bathroom::set_bathtub_bubbles(bool bubblestate)
-{
-    bathtub->set_bubbleState(bubblestate);
-}
 
 
 void bathroom::get_bathtubinfo()
 {
-    bathtub->get_bathtubInfo();
+    bathtubBathroom->get_bathtubInfo();
 }
 
 

@@ -42,6 +42,7 @@
         "string": "cpp",
         "thread": "cpp",
         "chrono": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "sstream": "cpp"
     }
 }

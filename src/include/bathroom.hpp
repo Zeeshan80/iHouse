@@ -7,13 +7,13 @@
 class bathroom  
 {
 	private:
-	double temperature;
-	double humidity;
+	double temperature;//done
+	double humidity;//done
 	bool waterLeak;
 	bool light;
 	bool personInBathroom;
 	std::string music;
-	bathtub* bathtub;
+	bathtub* bathtubBathroom;
 	//do
 
 	public:
@@ -37,9 +37,7 @@ class bathroom
 		std::string get_music();
 		//Set and get function for controlling the bathtub
 		void set_bathtub(unsigned int waterTemperature , unsigned int waterHeight, bool bubblestate);
-		void set_bathtub_temperature(unsigned int waterTemperature);
-		void set_bathtub_waterHeight(unsigned int waterHeight);
-		void set_bathtub_bubbles(bool bubblestate);
+		bathtub* get_bathtub();
 		void get_bathtubinfo();
 		bathroom(double temperature1,double humidity1,bool waterleak1=false,bool light1=false,bool personInBathroom1=false,std::string music1="none");
 
