@@ -4,18 +4,21 @@
 #include "Sensors.hpp"
 #include "iostream"
 
-class LightSensor : public Sensors {
+class LightSensor : public virtual Sensors {
+	
 	private:
 		// Variables
-		int* LightValue;
-		bool LightPower;
+		int LightValue;
+		bool LightPower = 0;
+	
 	public:
 		//  Constructur & Destructur
 		LightSensor();
 		~LightSensor();
 		// Funcions
-		void setLight(int *value);
-		int getLight();
 		bool checkLight();
+		void setLight(int value);
+		int getLight();
+		void printLightSensor();
 };
 #endif

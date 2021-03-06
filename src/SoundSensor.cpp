@@ -4,40 +4,24 @@
 SoundSensor::SoundSensor(){}
 SoundSensor::~SoundSensor(){}
 
-void SoundSensor::setSound(){
-    SoundValue = true; 
+void SoundSensor::setSound(int value){
+    SoundValue = value; 
+}
+
+bool SoundSensor::checkSound(){
+if (SoundValue < 10)     
+    return (SoundPower == false);
+else
+    return (SoundPower == true); 
 }
 
 int SoundSensor::getSound(){
 return SoundValue;
 } 
 
-bool SoundSensor::checkSound(){
-if (SoundValue < 10)     
-    return true;
-else
-    return false; 
+void SoundSensor::printSoundSensor(){
+
+std::cout << "The volum is -" << getSound() << " dB " <<  std::endl;
+
 }
 
-
-
-/* void SoundSensor::setValue(int v){
-    value = v;
-}
-
-int SoundSensor::getValue(){
-    return value;
-}
-
-void SoundSensor::Soundadjustment(){
-
-    if(getValue()<10){ 
-       std::cout << "Lyset er på " << std::endl;
-       std::cout << std::endl;
-    }
-    else{
-         std::cout << "Lyset er av " << std::endl;
-         std::cout << std::endl;
-    }
-        
-} */

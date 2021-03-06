@@ -30,16 +30,59 @@
 #include "include/TemperaturSensor.hpp"
 // Local libraries
 #include "iostream"
+#include <iomanip>
 
 int main(){ 
     // Oject for each sensor/sub-class
-    LightSensor LightObject;
-    MotionSensor MotionObject;
-    SoundSensor SoundObject;
-    TemperaturSensor TempObject;
-    // Logic based on each sensor and its purpose
-    
+    LightSensor ObjectLight;
+    MotionSensor ObjectMotion;
+    SoundSensor ObjectSound;
+    TemperaturSensor ObjectTemp;
 
+    // SoundSensor objSoundSensor;
+    // Sensors* objSensors = &objSoundSensor;
+
+
+    // Sensors* ObjectLight =  new LightSensor(); 
+    // Sensors* ObjectMotion = new MotionSensor();
+    // Sensors* ObjectSound = new SoundSensor();
+    // Sensors* ObjectTemp = new TemperaturSensor();
+
+    // Logic based on each sensor and its purpose
+    srand((int)time(0));
+    int myRandomLightValue = (rand() % 20) + 1; 
+    int myRandomMotionValue = (rand() % 1) + 1;
+    int myRandomSoundValue = (rand() % 10) + 1;
+    int myRandomTempValue = (rand() % 40) + 1;
+    ObjectLight.setLight(myRandomLightValue);
+    ObjectMotion.setMotion(myRandomMotionValue);
+    ObjectSound.setSound(myRandomSoundValue);
+    ObjectTemp.setTemp(myRandomTempValue);
+    
+        std::cout << std::endl; 
+        std::cout << " ----------- iHOUSE ----------- " << std::endl; 
+        std::cout << std::endl;
+        std::cout << std::boolalpha;
+        std::cout << "Light sensor is on: " << ObjectLight.checkLight()<< std::endl;
+        std::cout << "Motion sensor is on: " << ObjectMotion.checkMotion()<< std::endl;
+        std::cout << "Sound sensor is on: " << ObjectSound.checkSound()<< std::endl;
+        std::cout << "Temp sensor is on: " << ObjectTemp.checkTemp()<< std::endl;
+        std::cout << std::endl; 
+        std::cout << "Give a input for adjusting intensity of the light: " << ObjectLight.getLight() << std::endl;
+        // std::cout << "Give a input value to adjust intensity of the Motion: " << ObjectMotion.getMotion() << std::endl;
+        std::cout << "Use the inout to adjust the volume from 1 to 10: " << ObjectSound.getSound() << std::endl;
+        std::cout << "Regulate the temperature by giving a input: " << ObjectTemp.getTemp() << std::endl;
+        std::cout << std::endl; 
+        ObjectLight.printLightSensor();
+        std::cout << std::endl; 
+        ObjectMotion.printMotionSensor();
+        std::cout << std::endl; 
+        ObjectSound.printSoundSensor();
+        std::cout << std::endl; 
+        ObjectTemp.printTempSensor();
+        std::cout << std::endl; 
+        std::cout << std::endl; 
+        ObjectLight.checkLight();
 
 
     return 0;

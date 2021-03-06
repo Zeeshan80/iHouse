@@ -8,14 +8,15 @@ class TemperaturSensor  : public Sensors {
 	private:
 		// Varaibles
 		int TempValue;
-		bool TempPower;
+		bool TempPower = 0;
 	public:
 		// Constructur & Destructur
 		TemperaturSensor();
 		~TemperaturSensor();
 		// Functions
-		void setTemp();
+		void setTemp(int value);
 		int getTemp();
 		bool checkTemp();
+		void printTempSensor();
 };
 #endif

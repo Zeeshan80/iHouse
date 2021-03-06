@@ -4,17 +4,21 @@
 MotionSensor::MotionSensor(){}
 MotionSensor::~MotionSensor(){}
 
-void MotionSensor::setMotion(){
-    MotionValue = true;
+void MotionSensor::setMotion(int value){
+    MotionValue = value;
+}
+
+bool MotionSensor::checkMotion(){
+    if (MotionValue < 10)     
+        return (MotionPower == false);
+    else
+        return (MotionPower == true); 
 }
 
 int MotionSensor::getMotion(){
     return MotionValue;
 }
 
-bool MotionSensor::checkMotion(){
-    if (MotionValue < 10)     
-        return true;
-    else
-        return false; 
+void MotionSensor::printMotionSensor(){
+    std::cout << "----------" << std::endl;
 }

@@ -8,14 +8,15 @@ class SoundSensor : public Sensors {
 	private:
 		// Variables;
 		int SoundValue;
-		bool SoundPower;
+		bool SoundPower = 0;
 	public:
 		// Constructur & Destructur
 		SoundSensor();
 		~SoundSensor();
 		// Functions
-		void setSound();
+		void setSound(int value);
 		int getSound();
 		bool checkSound();
+		void printSoundSensor();
 };
 #endif

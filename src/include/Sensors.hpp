@@ -2,35 +2,47 @@
 #define SENSORS_H
 #pragma once
 
-class Sensors  
-{
+class Sensors {
+	/*  
 	private:
-
-	public:
-		int LightValue, MotionValue, Soundvalue, TempValue;
+		int* LightValue;
+		int* MotionValue; 
+		int* Soundvalue;
+		int* TempValue;
 		//To check that the sensors are working or not or simple to activate
 		// a sensore we set it to true or false for which we used bool as return type
-		bool LightPower, MotionPower, SoundPower, TempPower; 
+		bool LightPower; 
+		bool MotionPower; 
+		bool SoundPower; 
+		bool TempPower; 
+	*/
+	public:	
 		// Constructur
-		Sensors(); 
+		 Sensors(); 
 		// Destructur
-		~Sensors();
+		 ~Sensors();
+		/*
 		// -----
-		void setLight();
-		void setMotion();
-		void setSound();
-		void setTemp();
+		virtual void setLight(int value) = 0;
+		virtual void setMotion(int value) = 0;
+		virtual void setSound(int value) = 0;
+		virtual void setTemp(int value) = 0;
 		// -----
-		int getLight();
-		int getMotion();	
-		int getSound();
-		int getTemp();
+		virtual int getLight() = 0;
+		virtual int getMotion() = 0;	
+		virtual int getSound() = 0;
+		virtual int getTemp() = 0;
 		// ------
-		bool checkLight();
-		bool checkMotion();
-		bool checkSound();
-		bool checkTemp();
-	
+		virtual bool checkLight() = 0;
+		virtual bool checkMotion() = 0;
+		virtual bool checkSound() = 0;
+		virtual bool checkTemp() = 0;
+		// --------
+		virtual void printLightSensor() = 0;
+        virtual void printMotionSensor() = 0;
+        virtual void printSoundSensor() = 0;
+        virtual void printTempSensor() = 0;
+	*/
 
 };
 #endif
