@@ -28,6 +28,7 @@ class wakeUpLight
 		//Print WakeUpLightInfo
 		void get_info();
 
+		wakeUpLight(unsigned int hour, unsigned int minute, std::string soundchoice, unsigned int light, bool state=false);
 		wakeUpLight();
 		~wakeUpLight();
 

@@ -1,30 +1,45 @@
 #include "include/humiditySensor.hpp"  
-	
+
 
 humiditySensor::humiditySensor() {}
 
-humiditySensor::humiditySensor(unsigned int humidity, bathroom* room,bool state)
+humiditySensor::humiditySensor(unsigned int humidity, room* room,bool state)
 {
     targetHumidity=humidity;
     roomObject=room;
     sensorOn=state;
 }
 
-void humiditySensor::set_newRoom(bathroom* room) 
+void humiditySensor::set_newRoom(room* room) 
 {
     roomObject=room;
 }
 
 void humiditySensor::sensorThread() 
 {
-    std::cout<< "The humidity Sensor for the " << (typeid(*roomObject).name()) << " with a target humidity of: "<< targetHumidity << "% is now turned on" << std::endl;//make string then write
-  while(sensorOn)
+    std::ostringstream oss;
+    oss << "The humidity Sensor for the " << roomObject->name() << " with a target humidity of: "<< targetHumidity << "% is now turned on" << std::endl;//make string then write
+    std::string var = oss.str();
+    std::cout << var;
+    oss.str("");
+    oss.clear();  
+    while(sensorOn)
   {
-    if(roomObject->get_humidity() < targetHumidity-3 || roomObject->get_humidity() > targetHumidity+3) // adding a +3 temp range.
-    {
-      std::cout << "Humidity is out of allowed range, the humidity in the "<< (typeid(*roomObject).name()) <<  " is: " << roomObject->get_humidity() << std::endl;
-      roomObject->set_humidity(targetHumidity);// can add a temp sensor which gradually increased temp with +1+1+1+1 per cycle.
-           std::cout << "Humidity is now adjusted to: " << roomObject->get_humidity() << std::endl;
+    if(roomObject->get_humidity() < targetHumidity-3 || roomObject->get_humidity() > targetHumidity+3)
+    {   
+
+        oss << "Humidity is out of allowed range, the humidity in the "<< roomObject->name() <<  " is: " << roomObject->get_humidity()<< "%" << std::endl;
+        var = oss.str();
+        std::cout << var;
+        oss.str("");
+        oss.clear(); 
+
+        roomObject->set_humidity(targetHumidity);
+        oss << "Humidity in the "<< roomObject->name() << "  is now adjusted to: " << roomObject->get_humidity() << "%" << std::endl;
+        var = oss.str();
+        std::cout << var;
+        oss.str("");
+        oss.clear(); 
     }
     //wait time for sensor before checking humidity again
     std::this_thread::sleep_for(std::chrono::seconds(5));

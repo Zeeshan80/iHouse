@@ -5,17 +5,18 @@
 #include <iostream>
 #include "bathroom.hpp"
 #include <typeinfo>
-	
+#include <sstream>
+
 class humiditySensor  
 {
 	private:
 		bool sensorOn;
 		unsigned int targetHumidity;
-		bathroom* roomObject; //change roomtemperature to generic "room"
+		room* roomObject; //change roomtemperature to generic "room"
 	public:
 
-		humiditySensor(unsigned int humidity, bathroom* room,bool state=false);
-		void set_newRoom(bathroom* room); //to be used if you for some reason need to change the room the sensor is in
+		humiditySensor(unsigned int humidity, room* room,bool state=false);
+		void set_newRoom(room* room); //to be used if you for some reason need to change the room the sensor is in
 		void sensorThread();
 		void enableSensorThread();
 		void disableSensorThread();

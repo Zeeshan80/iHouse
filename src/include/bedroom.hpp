@@ -3,30 +3,24 @@
 #pragma once
 #include <string>
 #include "wakeUpLight.hpp"
+#include "room.hpp"
 
-class bedroom  
+class bedroom  : public room
 {
 	private:
-	double temperature;
-	double humidity;
-	bool light;
-	wakeUpLight* wakeUpLight();
+	wakeUpLight* wakeUpLightBedroom;
 
-	public:
-		//Set and get function for temperature
-		void set_temp(unsigned int temp);
-		int get_temp();
-		//Set and get function for humidity
-		void set_humidity(unsigned int humidityInAir);
-		int get_humidity();
-		//Set and get function for the lights
-		void set_lightLevel(bool state);
-		bool get_lightLevel();	
+	public:	
 		//Set and get function for the wakeUpLight
-		void set_wakeUpLight(unsigned int hour, unsigned int minute,unsigned int soundnumber,unsigned int brightness);
-		void get_wakeUplightInfo();	
+		void set_wakeUpLight(unsigned int hour, unsigned int minute,std::string soundnumber,unsigned int brightness, bool state);
+		void set_wakeUpLightState(bool state);
+		void get_wakeUplightInfo();
 
+		//Get room type.
+		std::string name();
 
+		//Constructors and destructors for bedroom
+		bedroom(double temperature1,double humidity1,bool light1=false,bool personInBedroom=false);
 		bedroom();
 		~bedroom();
 

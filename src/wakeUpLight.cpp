@@ -74,6 +74,15 @@ void wakeUpLight::get_info() {
  
 
 
+wakeUpLight::wakeUpLight(unsigned int hour, unsigned int minute, std::string soundchoice, unsigned int light, bool state)
+{
+    alarmTimeHour=hour;
+	alarmTimeMinute=minute;
+	sound=soundchoice;
+	lightLevel=light;
+	onOff=state;
+}
+
 wakeUpLight::wakeUpLight() {
     
 }
