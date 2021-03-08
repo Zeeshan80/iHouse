@@ -14,10 +14,6 @@ void LightSensor::setLight(int value){
         LightValue = value;
 }
 
-int& LightSensor::operator*() { 
-    return LightValue; 
-    }
-
 bool LightSensor::checkLight(){
     if (LightValue < 10) 
         return (LightPower == false); 

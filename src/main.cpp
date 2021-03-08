@@ -64,7 +64,7 @@ int main(){
         time_t now = time(0);
         tm *ltm = localtime(&now);
         std::cout << std::endl; 
-        std::cout << "Year:" << 1900 + ltm->tm_year << std::endl;
+        std::cout << "Year: " << 1900 + ltm->tm_year << std::endl;
         std::cout << "Month: " << 1 + ltm->tm_mon << std::endl;
         std::cout << "Day: " << ltm->tm_mday << std::endl;
         std::cout << "Time: " << ltm->tm_hour <<  ":";
