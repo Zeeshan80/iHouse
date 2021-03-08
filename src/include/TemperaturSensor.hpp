@@ -1,11 +1,12 @@
 #ifndef TEMPERATURSENSOR_H
 #define TEMPERATURSENSOR_H
 #pragma once
+
 #include "Sensors.hpp"
 #include "iostream"
 
 class TemperaturSensor  : public Sensors {
-	private:
+	protected:
 		// Varaibles
 		int TempValue;
 		bool TempPower = 0;

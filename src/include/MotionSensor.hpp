@@ -1,11 +1,12 @@
 #ifndef MOTIONSENSOR_H
 #define MOTIONSENSOR_H
-#include "Sensors.hpp"
-#include "LightSensor.hpp"
 #pragma once
-	
-class MotionSensor : public LightSensor {
-	private:
+
+#include "Sensors.hpp"
+#include "iostream"
+
+class MotionSensor : public Sensors {
+	protected:
 		// Variables
 		int MotionValue;
 		bool MotionPower = 0;

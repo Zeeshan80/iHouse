@@ -1,18 +1,17 @@
 #ifndef LIGHTSENSOR_H
 #define LIGHTSENSOR_H
-#include <cstddef>
 #pragma once
+
 #include "Sensors.hpp"
 #include "iostream"
+#include <cstddef>
 
 
-class LightSensor : public virtual Sensors {
-	
-	private:
+class LightSensor : public Sensors {
+	protected:
 		// Variables
 		int LightValue;
 		bool LightPower = 0;
-	
 	public:
 		//  Constructur & Destructur
 		LightSensor();

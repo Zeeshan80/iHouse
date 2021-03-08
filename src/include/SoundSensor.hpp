@@ -3,9 +3,10 @@
 #pragma once
 
 #include "Sensors.hpp"
+#include "iostream"
 	
 class SoundSensor : public Sensors {
-	private:
+	protected:
 		// Variables;
 		int SoundValue;
 		bool SoundPower = 0;
