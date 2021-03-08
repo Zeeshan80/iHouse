@@ -7,7 +7,6 @@ class LivingRoom
 	private:
 
 	public:
-
 		LivingRoom();
 		~LivingRoom();
 

@@ -21,11 +21,16 @@ int TemperaturSensor::getTemp(){
 }
 
 void TemperaturSensor::printTempSensor(){
-
-    if (TempValue > 20 ) {
-        std::cout << "The temperature is: " << TempValue << " \u2103" <<std::endl; 
-    }
-    else
-        std::cout << "It is to chilli, you should power on the sensor and adjust the temperature up" << std::endl; 
-
+    std::cout << "Temp sensor is on: " << checkTemp() << std::endl;
+        if (checkTemp() == true) {
+            std::cout << "Regulate the temperature by giving a input for desired temperature: " << getTemp() << std::endl;
+                if (TempValue > 20 ) {
+                     std::cout << "The temperature is: " << TempValue << " \u2103" <<std::endl; 
+                }
+                else
+                    std::cout << "It is to chilli, you should power on the sensor and adjust the temperature up" << std::endl; 
+                }
+        else if (checkTemp() == false) {
+            std::cout << "The temperature gauge is off " << std::endl;
+        }
 }

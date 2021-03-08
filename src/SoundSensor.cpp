@@ -20,8 +20,14 @@ return SoundValue;
 } 
 
 void SoundSensor::printSoundSensor(){
-
-std::cout << "The volum is -" << getSound() << " dB " <<  std::endl;
+    std::cout << "Sound sensor is on: " << checkSound( )<< std::endl;
+        if (checkSound() == true) {     
+            std::cout << "Use the volume button to adjust the volume from 1 to 10: " << getSound() << std::endl;
+            std::cout << "The volum is -" << getSound() << " dB " <<  std::endl;
+        }
+        else if (checkSound() == false){
+            std::cout << "The sound is off " << std::endl;
+        } 
 
 }
 

@@ -9,10 +9,10 @@ void MotionSensor::setMotion(int value){
 }
 
 bool MotionSensor::checkMotion(){
-    if (MotionValue < 10)     
-        return (MotionPower == false);
+    if (MotionValue > 1 && MotionValue < 10)     
+        return (MotionPower == true);
     else
-        return (MotionPower == true); 
+        return (MotionPower == false); 
 }
 
 int MotionSensor::getMotion(){
@@ -20,5 +20,10 @@ int MotionSensor::getMotion(){
 }
 
 void MotionSensor::printMotionSensor(){
-    std::cout << "----------" << std::endl;
-}
+    std::cout << "Motion sensor is on: " << checkMotion() << std::endl;
+        if (checkMotion() == true) {
+            std::cout << "Motion detected in the room" << std::endl;
+        }
+        else
+            std::cout << "--------------" << std::endl;
+        }
