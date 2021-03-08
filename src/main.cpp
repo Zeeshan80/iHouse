@@ -28,6 +28,8 @@
 #include "include/MotionSensor.hpp"
 #include "include/SoundSensor.hpp"
 #include "include/TemperaturSensor.hpp"
+#include "include/LivingRoom.hpp"
+#include "include/Kitchen.hpp"
 // Local libraries
 #include "iostream"
 #include <iomanip>
@@ -39,16 +41,31 @@ int main(){
     MotionSensor ObjectMotion;
     SoundSensor ObjectSound;
     TemperaturSensor ObjectTemp;
+    Kitchen ObjectKitchen;
+    LivingRoom ObjectLivingRoom;
     // Logic based on each sensor and its purpose
     srand((int)time(0));
-    int myRandomLightValue = (rand() % 20) + 1; 
-    int myRandomMotionValue = (rand() % 1) + 1;
-    int myRandomSoundValue = (rand() % 10) + 1;
-    int myRandomTempValue = (rand() % 40) + 1;
+    int myRandomLightValue = (rand() % 20 + 1); 
+    int myRandomMotionValue = (rand() % 1 + 1);
+    int myRandomSoundValue = (rand() % 10 + 1);
+    int myRandomTempValue = (rand() % 40 + 1);
     ObjectLight.setLight(myRandomLightValue);
     ObjectMotion.setMotion(myRandomMotionValue);
     ObjectSound.setSound(myRandomSoundValue);
     ObjectTemp.setTemp(myRandomTempValue);
+    
+    int myRandomRoomSelection = (rand() % 4 + 1);
+    if (myRandomRoomSelection == 1) {
+        int myKitchen = myRandomRoomSelection; 
+        ObjectKitchen.setKitchen(myKitchen);
+    }
+
+    if (myRandomRoomSelection == 2) {
+        int myLivingRoom = myRandomRoomSelection;
+        ObjectLivingRoom.setLivingRoom(myLivingRoom);
+    }
+
+
     std::cout << std::endl; 
     std::cout << std::endl; 
     std::cout << " ----------- iHOUSE ----------- " << std::endl;
@@ -65,6 +82,8 @@ int main(){
     std::cout << std::endl;
     std::cout << std::boolalpha;
     ObjectMotion.printMotionSensor();
+    ObjectKitchen.printKitchen();
+    ObjectLivingRoom.printLivinRoom();
     std::cout << std::endl; 
     ObjectLight.printLightSensor();
     std::cout << std::endl; 
@@ -72,8 +91,7 @@ int main(){
     std::cout << std::endl; 
     ObjectTemp.printTempSensor();
     std::cout << std::endl; 
-    std::cout << std::endl; 
-
+  
     return 0;
 }
 

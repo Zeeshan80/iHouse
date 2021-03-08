@@ -21,9 +21,9 @@ int MotionSensor::getMotion(){
 
 void MotionSensor::printMotionSensor(){
     std::cout << "Motion sensor is on: " << checkMotion() << std::endl;
-        if (checkMotion() == true) {
+      /*   if (checkMotion() == true) {
             std::cout << "Motion detected in the room" << std::endl;
         }
         else
-            std::cout << "--------------" << std::endl;
+            std::cout << "--------------" << std::endl; */
         }
