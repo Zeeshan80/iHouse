@@ -37,7 +37,7 @@ std::string bathroom::name()
     return "Bathroom";
 }
 
-bathroom::bathroom(double temperature1,double humidity1,bool waterLeak1,bool light1,bool personInBathroom1,std::string music1)
+bathroom::bathroom(double temperature1,double humidity1,bool waterLeak1,int light1,bool personInBathroom1,std::string music1)
 {
     temperature=temperature1;
     humidity=humidity1;

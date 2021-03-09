@@ -30,7 +30,7 @@ class bathroom  : public room
 		std::string name();
 
 		//Constructor and destructors
-		bathroom(double temperature1,double humidity1,bool waterleak1=false,bool light1=false,bool personInBathroom1=false,std::string music1="none");
+		bathroom(double temperature1,double humidity1,bool waterleak1=false,int light1=0,bool personInBathroom1=false,std::string music1="none");
 
 		bathroom();
 		~bathroom();

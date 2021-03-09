@@ -5,7 +5,7 @@ Kitchen::Kitchen(){}
 	
 Kitchen::~Kitchen(){}
 
-Kitchen::Kitchen(double temperature1,double humidity1,bool light1,bool personInBedroom)
+Kitchen::Kitchen(double temperature1,double humidity1,int light1,bool personInBedroom)
 {
     temperature=temperature1;
     humidity=humidity1;

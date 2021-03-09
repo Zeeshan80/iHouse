@@ -4,7 +4,7 @@ LivingRoom::LivingRoom(){}
 LivingRoom::~LivingRoom(){}
 
 
-LivingRoom::LivingRoom(double temperature1,double humidity1,bool light1,bool personInBedroom)
+LivingRoom::LivingRoom(double temperature1,double humidity1,int light1,bool personInBedroom)
 {
     temperature=temperature1;
     humidity=humidity1;

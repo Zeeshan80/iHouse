@@ -13,7 +13,7 @@ class Kitchen  : public room
 		//Constructors and destructors for the kitchen
 		Kitchen();
 		~Kitchen();
-		Kitchen(double temperature1,double humidity1,bool light1=false,bool personInBedroom=false);
+		Kitchen(double temperature1,double humidity1,int light1=0,bool personInBedroom=false);
 		
 		//Get room type.
 		std::string name();

@@ -5,7 +5,7 @@ bedroom::bedroom() {}
 
 bedroom::~bedroom() {}
 
-bedroom::bedroom(double temperature1,double humidity1,bool light1,bool personInBedroom)
+bedroom::bedroom(double temperature1,double humidity1,int light1,bool personInBedroom)
 {
     temperature=temperature1;
     humidity=humidity1;

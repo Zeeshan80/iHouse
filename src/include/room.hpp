@@ -10,7 +10,7 @@ class room
 	protected:
 		double temperature;
 		double humidity;
-		bool light;
+		int light;
 		bool personInRoom;
 	public:
 		//Set and get function for temperature
@@ -20,8 +20,8 @@ class room
 		void set_humidity(unsigned int humidityInAir);
 		int get_humidity();
 		//Set and get function for the lights
-		void set_lightLevel(bool state);
-		bool get_lightLevel();
+		void set_lightLevel(int state);
+		int get_lightLevel();
 		//Set and get function for seeing if someone is in the bathroom
 		void set_personInRoom(bool state);
 		bool get_personInRoom();

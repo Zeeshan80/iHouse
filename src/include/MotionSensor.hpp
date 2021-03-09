@@ -20,23 +20,32 @@ class MotionSensor  {
 		bool MotionState;// if person is in room
 		room* roomObject;
 		int countdown; //countdown for turning the motion sensor "of"
-		bool activated;
+		bool activated; //Variable to get for light to see if it should be on
+		bool sensOn; // enable/disable sensor thread
+
+
 
 
 	public:
 		// Constructur & Destructur
-		MotionSensor(int timer, room* room);
+		MotionSensor(int timer, room* room, bool state);
 		MotionSensor();
 		~MotionSensor();
 
+		//changing room
 		void set_newRoom(room* room); //to be used if you for some reason need to change the room the sensor is in
 		
+		//sensor methods
 		void sensorThread();
+		void enableSensorThread();
+		void disableSensorThread();
 
-		void setMotionTime(int value);//
-		int getMotionTime();//
-		bool checkMotionState();//
-		void printMotionSensor();//
+		//set and get for how long the motionsensor keeps the circuit connected on
+		void setMotionTime(int value);
+		int getMotionTime();
+
+		bool checkMotionState();
+		void printMotionSensor();
 		bool getActivated();
 };
 #endif

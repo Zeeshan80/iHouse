@@ -10,7 +10,7 @@ class LivingRoom : public room
 		
 	public:
 		// Constructors and destructors for the livingroom
-		LivingRoom(double temperature1,double humidity1,bool light1=false,bool personInBedroom=false);
+		LivingRoom(double temperature1,double humidity1,int light1=0,bool personInBedroom=false);
 		LivingRoom();
 		~LivingRoom();
 

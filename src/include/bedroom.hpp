@@ -20,7 +20,7 @@ class bedroom  : public room
 		std::string name();
 
 		//Constructors and destructors for bedroom
-		bedroom(double temperature1,double humidity1,bool light1=false,bool personInBedroom=false);
+		bedroom(double temperature1,double humidity1,int light1=0,bool personInBedroom=false);
 		bedroom();
 		~bedroom();
 

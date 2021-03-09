@@ -7,6 +7,10 @@
 #include "include\heatSensor.hpp"
 #include "include\humiditySensor.hpp"
 #include "include\MotionSensor.hpp"
+
+#include "include/LightSensor.hpp"
+
+
 #include <thread>
 
 //mingw32-make
@@ -41,14 +45,18 @@ int main(){
 
 
   kjokken1->set_personInRoom(true);
-  MotionSensor* sensorMotionKitchen = new MotionSensor(5, kjokken1);
+  MotionSensor* sensorMotionKitchen = new MotionSensor(5, kjokken1, true);
   std::thread t5(&MotionSensor::sensorThread, sensorMotionKitchen);
  
+  LightSensor* sensorLightKitchen = new LightSensor(400, kjokken1,sensorMotionKitchen, true);
+ std::thread t6(&LightSensor::sensorThread, sensorLightKitchen);
   std::cin.get();
   kjokken1->set_personInRoom(false);
 
   std::cin.get();
- t5.join();
+  
+  kjokken1->set_personInRoom(true);
+ 
 
   //Changing temperature and humidity in the bathroom
   std::cin.get();
@@ -71,6 +79,8 @@ int main(){
   t2.join();
   t3.join();
   t4.join();
+  t5.join();
+  t6.join();
  
   //Standard return variable
   return 0;

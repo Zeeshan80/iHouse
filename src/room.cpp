@@ -32,11 +32,11 @@ int room::get_humidity() {
     return humidity;
 }
 
-void room::set_lightLevel( bool state) {
-    light=state;
+void room::set_lightLevel( int level) {
+    light=level;
 }
 
-bool room::get_lightLevel() {
+int room::get_lightLevel() {
     return light;
 }
 

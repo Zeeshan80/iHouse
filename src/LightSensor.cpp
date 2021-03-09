@@ -1,27 +1,53 @@
 #include "include/LightSensor.hpp"
-#include "iostream"
-#include <cstddef>
 #include <iomanip>
 
 LightSensor::LightSensor(){}
 LightSensor::~LightSensor(){}
 
-void LightSensor::setLight(int value){
+LightSensor::LightSensor(int brightness,  room* room, MotionSensor* motionSensor, bool state)
+{
+    LightValue=brightness;
+    LightSensoronOff=state;
+    roomObject=room;
+    motionSensorObject=motionSensor;
+}
+
+
+bool LightSensor::lightStatus(){
+    return LightSensoronOff;
+}
+
+void LightSensor::setLightValue(int value){
         LightValue = value;
 }
 
-bool LightSensor::checkLight(){
-    if (LightValue < 10) 
-        return (LightPower == false); 
-    else
-        return (LightPower == true);
-}
-
-int LightSensor::getLight(){
+int LightSensor::getLightValue(){
     return LightValue;
 }
 
-void LightSensor::printLightSensor(){
+
+void LightSensor::sensorThread()
+{
+    while(motionSensorObject->getActivated() && LightSensoronOff)
+    {
+        roomObject->set_lightLevel(LightValue);
+        std::this_thread::sleep_for(std::chrono::seconds(10));
+    }
+}
+
+void LightSensor::enableSensorThread()
+{
+    LightSensoronOff=true;
+}
+
+void LightSensor::disableSensorThread()
+{
+    LightSensoronOff=false;
+}
+
+
+
+/*void LightSensor::printLightSensor(){
     std::cout << "Light sensor is on: " << checkLight() << std::endl;
         if (checkLight() == true) {
             std::cout << "Give a input for adjusting intensity of the light: " << getLight() << std::endl;
@@ -35,5 +61,5 @@ void LightSensor::printLightSensor(){
         else if (checkLight() == false){
             std::cout << "The light is off " << std::endl;
         }         
-}
+}*/
 
