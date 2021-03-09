@@ -43,6 +43,10 @@
         "thread": "cpp",
         "chrono": "cpp",
         "ratio": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "ctime": "cpp",
+        "iomanip": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     }
 }

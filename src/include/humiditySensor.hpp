@@ -4,6 +4,9 @@
 #include <thread>
 #include <iostream>
 #include "bathroom.hpp"
+#include "bedroom.hpp"
+#include "Kitchen.hpp"
+#include "LivingRoom.hpp"
 #include <typeinfo>
 #include <sstream>
 

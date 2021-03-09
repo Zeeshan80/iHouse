@@ -2,6 +2,7 @@
 #define ROOM_H
 #pragma once
 #include <string>
+#include "iostream"
 	
 class room  
 {	private:

@@ -1,7 +1,7 @@
 #ifndef BEDROOM_H
 #define BEDROOM_H
 #pragma once
-#include <string>
+//#include <string>
 #include "wakeUpLight.hpp"
 #include "room.hpp"
 

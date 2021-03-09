@@ -2,17 +2,25 @@
 #include "iostream"
 #include "include\bathroom.hpp"
 #include "include\bedroom.hpp"
+#include "include\Kitchen.hpp"
+#include "include\LivingRoom.hpp"
 #include "include\heatSensor.hpp"
 #include "include\humiditySensor.hpp"
+#include "include\MotionSensor.hpp"
 #include <thread>
 
 //mingw32-make
 int main(){
 
+
   //making a bathroom
   bathroom* bathroom1 = new bathroom(5,30);
   //making a bedroom
   bedroom* bedroom1 = new bedroom(5,30);
+  //making a kitchen
+  Kitchen* kjokken1 = new Kitchen(50,50);
+  //making a livingroom
+  LivingRoom* livingroom1 = new LivingRoom(5, 30);
 
   //making the temperature sensors for the different rooms
   heatSensor* sensorTempBathroom = new heatSensor(20, bathroom1, true);
@@ -30,6 +38,17 @@ int main(){
   //starting the threads to monitor the different humidity levels.
   std::thread t3(&humiditySensor::sensorThread, sensorHumidityBathroom);
   std::thread t4(&humiditySensor::sensorThread, sensorHumidityBedroom);
+
+
+  kjokken1->set_personInRoom(true);
+  MotionSensor* sensorMotionKitchen = new MotionSensor(5, kjokken1);
+  std::thread t5(&MotionSensor::sensorThread, sensorMotionKitchen);
+ 
+  std::cin.get();
+  kjokken1->set_personInRoom(false);
+
+  std::cin.get();
+ t5.join();
 
   //Changing temperature and humidity in the bathroom
   std::cin.get();
@@ -52,6 +71,7 @@ int main(){
   t2.join();
   t3.join();
   t4.join();
+ 
   //Standard return variable
   return 0;
 }

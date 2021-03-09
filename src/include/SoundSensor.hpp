@@ -1,0 +1,29 @@
+#ifndef SOUNDSENSOR_H
+#define SOUNDSENSOR_H
+#pragma once
+
+#include <thread>
+#include <iostream>
+#include "bathroom.hpp"
+#include "bedroom.hpp"
+#include "Kitchen.hpp"
+#include "LivingRoom.hpp"
+#include <typeinfo>
+#include <sstream>
+	
+class SoundSensor  {
+	protected:
+		// Variables;
+		int SoundValue;
+		bool SoundPower = 0;
+	public:
+		// Constructur & Destructur
+		SoundSensor();
+		~SoundSensor();
+		// Functions
+		void setSound(int value);
+		int getSound();
+		bool checkSound();
+		void printSoundSensor();
+};
+#endif

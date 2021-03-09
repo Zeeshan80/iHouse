@@ -6,6 +6,7 @@ room::room(){}
 	
 room::~room(){}
 
+
 void room::set_temp(unsigned int temp) {
     if(0 < temp && temp < 30){
     temperature=temp;
