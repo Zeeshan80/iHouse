@@ -59,8 +59,8 @@ int main(){
     ObjectSound.setSound(myRandomSoundValue);
     ObjectTemp.setTemp(myRandomTempValue);
     // Logic based on each room and its purpose
-    int myRandomRoomSelection = (rand() % 4) + 1;
-
+    int myRandomRoomSelection =  (rand() % 4 + 1);
+/* 
     if (myRandomRoomSelection == 1) {
         int* myBathRoomPointer = &myRandomRoomSelection; 
         int myBathRoom = *myBathRoomPointer;
@@ -82,7 +82,36 @@ int main(){
         int* mySleepingRoomPointer = &myRandomRoomSelection; 
         int mySleepingRoom = *mySleepingRoomPointer;        
         ObjectSleepingRoom.setSleepingRoom(mySleepingRoom);
-    }
+    } */
+int myBathRoom;
+int myKitchen;
+int myLivingRoom;
+int mySleepingRoom;
+
+switch (myRandomRoomSelection) {
+    case 1:
+        myBathRoom = myRandomRoomSelection;  
+        ObjectBathRoom.setBathRoom(myBathRoom);
+    break;
+    
+    case 2:     
+        myKitchen  = myRandomRoomSelection; 
+        ObjectKitchen.setKitchen(myKitchen);
+    break;
+
+    case 3:
+        myLivingRoom = myRandomRoomSelection;
+        ObjectLivingRoom.setLivingRoom(myLivingRoom);
+    break;
+    
+    case 4:
+        mySleepingRoom = myRandomRoomSelection;      
+        ObjectSleepingRoom.setSleepingRoom(mySleepingRoom);
+    break;
+}
+
+
+
 
     // from this section and down you will have the outputs for compilare
     std::cout << std::endl; 
