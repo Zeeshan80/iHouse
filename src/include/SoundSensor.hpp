@@ -3,18 +3,21 @@
 #pragma once
 
 #include "Sensors.hpp"
+#include "iostream"
 	
-class SoundSensor : public Sensors
-{
-	private:
-		int value;
+class SoundSensor : public Sensors {
+	protected:
+		// Variables;
+		int SoundValue;
+		bool SoundPower = 0;
 	public:
+		// Constructur & Destructur
 		SoundSensor();
 		~SoundSensor();
-		void Init();
-		void Write();
-		void Read();	
-		void setValue(int v);
-		int getValue();
+		// Functions
+		void setSound(int value);
+		int getSound();
+		bool checkSound();
+		void printSoundSensor();
 };
 #endif

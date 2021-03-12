@@ -1,11 +1,11 @@
 #include "include/Sensors.hpp"
 	
-Sensors::Sensors()
-{
-	
+Sensors::Sensors(){	
+    //  LightValue = nullptr;
+	//  MotionValue = nullptr;
+	//  Soundvalue = nullptr;
+	//  TempValue = nullptr;
 }
 	
-Sensors::~Sensors()
-{
-	
+Sensors::~Sensors(){	
 }
