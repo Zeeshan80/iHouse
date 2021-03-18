@@ -77,7 +77,6 @@ int main(){
         int myLivingRoom = *myLivingRoomPointer;
         ObjectLivingRoom.setLivingRoom(myLivingRoom);
     }
-
     else if (myRandomRoomSelection == 4) {
         int* mySleepingRoomPointer = &myRandomRoomSelection; 
         int mySleepingRoom = *mySleepingRoomPointer;        
@@ -148,5 +147,3 @@ switch (myRandomRoomSelection) {
     
     return 0;
 }
-
-
